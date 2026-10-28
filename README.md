@@ -28,4 +28,4 @@ Mis primeros ejercicios de HTML y CSS.
 
     -Catálogo de productos
 
-Pablo Molina Cansino 2SMRT
+Pablo Molina Cansino 2 SMRT
