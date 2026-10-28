@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="email"], input[type="date"], input[type="search"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .grupo-radio {
+            margin-top: 5px;
+        }
+        .grupo-radio label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+        .buscador {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            max-width: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .pendiente {
+            background-color: #ffe599; 
+        }
+        .confirmada {
+            background-color: #9fc5e8; 
+        }
+        .entregada {
+            background-color: #b6d7a8; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de reserva de biblioteca</h1>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            
+            <label for="nombre">Nombre del usuario:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="socio">Número de socio:</label>
+            <input type="number" id="socio" name="socio" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Detalles de la reserva</legend>
+            
+            <label for="titulo">Título del libro:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" required>
+
+            <label for="fecha_reserva">Fecha de reserva:</label>
+            <input type="date" id="fecha_reserva" name="fecha_reserva" required>
+
+            <label for="fecha_recogida">Fecha prevista de recogida:</label>
+            <input type="date" id="fecha_recogida" name="fecha_recogida" required>
+
+            <label>Tipo de préstamo:</label>
+            <div class="grupo-radio">
+                <input type="radio" id="sala" name="prestamo" value="sala" required>
+                <label for="sala">Sala</label>
+                
+                <input type="radio" id="domicilio" name="prestamo" value="domicilio" required>
+                <label for="domicilio">Domicilio</label>
+            </div>
+
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </fieldset>
+
+        <div class="botones">
+            <input type="submit" value="Enviar reserva">
+            <input type="reset" value="Limpiar campos">
+        </div>
+    </form>
+
+    <div class="buscador">
+        <label for="buscar_socio">Buscar reserva por número de socio:</label>
+        <input type="search" id="buscar_socio" name="buscar_socio" placeholder="Introducir número de socio...">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>N.º reserva</th>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Fecha de reserva</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ana López</td>
+                <td>El principito</td>
+                <td>14/10/2026</td>
+                <td class="pendiente">Pendiente</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pablo Ruiz</td>
+                <td>La sombra del viento</td>
+                <td>13/10/2026</td>
+                <td class="confirmada">Confirmada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Marta Díaz</td>
+                <td>Don Quijote</td>
+                <td>12/10/2026</td>
+                <td class="entregada">Entregada</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Luis Martín</td>
+                <td>Cien años de soledad</td>
+                <td>11/10/2026</td>
+                <td class="pendiente">Pendiente</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

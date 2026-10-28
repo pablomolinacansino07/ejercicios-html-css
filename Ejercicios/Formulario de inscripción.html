@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de inscripción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .opciones-linea {
+            margin-top: 5px;
+            font-weight: normal;
+        }
+        .opciones-linea label {
+            display: inline;
+            font-weight: normal;
+            margin-top: 0;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            margin-top: 25px;
+            padding: 10px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulario de inscripción</h1>
+
+    <form action="#" method="POST">
+        
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="ciclo">Ciclo formativo en el que está matriculado:</label>
+        <input type="text" id="ciclo" name="ciclo" required>
+
+        <label>Turno preferido:</label>
+        <div class="opciones-linea">
+            <input type="radio" id="manana" name="turno" value="mañana" required>
+            <label for="manana">Mañana</label>
+            
+            <input type="radio" id="tarde" name="turno" value="tarde" required>
+            <label for="tarde">Tarde</label>
+        </div>
+
+        <label for="modalidad">Modalidad:</label>
+        <select id="modalidad" name="modalidad" required>
+            <option value="">Selecciona una opción</option>
+            <option value="presencial">Presencial</option>
+            <option value="semipresencial">Semipresencial</option>
+            <option value="online">Online</option>
+        </select>
+
+        <label class="opciones-linea">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            Aceptación de la política de privacidad
+        </label>
+
+        <input type="submit" value="Inscribirse">
+        
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de productos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .agotado {
+            background-color: #e06666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Catálogo de informática</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Disponibilidad</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P001</td>
+                <td>Teclado</td>
+                <td>25.00 €</td>
+                <td>15</td>
+                <td>Disponible</td>
+                <td><a href="https://www.pccomponentes.com/owlotech-mk700-combo-teclado-y-raton-low-profile-dark-grey">Ver producto</a></td>
+            </tr>
+            <tr>
+                <td>P002</td>
+                <td>Ratón</td>
+                <td>9.00 €</td>
+                <td>30</td>
+                <td>Disponible</td>
+                <td><a href="https://www.pccomponentes.com/pccom-essential-m20-raton-wireless-1000dpi-gris">Ver producto</a></td>
+            </tr>
+            <tr class="agotado">
+                <td>P003</td>
+                <td>Monitor</td>
+                <td>160.00 €</td>
+                <td>0</td>
+                <td>Agotado</td>
+                <td><a href="https://www.pccomponentes.com/monitor-pccom-elysium-pro-27-ips-qhd-270hz">Ver producto</a></td>
+            </tr>
+            <tr>
+                <td>P004</td>
+                <td>Auriculares</td>
+                <td>50.00 €</td>
+                <td>8</td>
+                <td>Disponible</td>
+                <td><a href="https://www.pccomponentes.com/auriculares-corsair-hs35-v3-con-cable-jack-3-5-mm-gaming-microfono-omnidireccional-blancos">Ver producto</a></td>
+            </tr>
+            <tr>
+                <td>P005</td>
+                <td>Webcam</td>
+                <td>30.00 €</td>
+                <td>3</td>
+                <td>Disponible</td>
+                <td><a href="https://www.pccomponentes.com/logitech-hd-webcam-c270">Ver producto</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
