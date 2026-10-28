@@ -2,30 +2,30 @@ Ejercicios-html-css
 
 Mis primeros ejercicios de HTML y CSS.
 
-    -Mi primera página
+    Mi primera página
 
-    -Una página con imágenes
+    Una página con imágenes
 
-    -Tabla de alumnos
+    Tabla de alumnos
 
-    -Presentación personal
+    Presentación personal
 
-    -Mis páginas favoritas
+    Mis páginas favoritas
 
-    -Mi top 5
+    Mi top 5
 
-    -Mi lista de cosas favoritas
+    Mi lista de cosas favoritas
 
-    -Horario de clase
+    Horario de clase
 
-    -Formulario de reserva de una biblioteca
+    Formulario de reserva de una biblioteca
 
-    -Formulario de inscripción
+    Formulario de inscripción
 
-    -Encuesta de satisfacción
+    Encuesta de satisfacción
 
-    -Ejemplo1CSS
+    Ejemplo1CSS
 
-    -Catálogo de productos
+    Catálogo de productos
 
 Pablo Molina Cansino 2 SMRT
