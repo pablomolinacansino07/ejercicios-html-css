@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Encuesta de Satisfacción</title>
+    <style>
+        /* Estilos basicos de libreta o apuntes de clase */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #000000;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        /* Formato basico para las tablas solicitado en el ejercicio */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #333333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Requisito: Colores segun la puntuacion de la valoracion */
+        .color-verde {
+            background-color: #99ff99;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .color-amarillo {
+            background-color: #ffff99;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .color-rojo {
+            background-color: #ff9999;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Encuesta de satisfacción</h2>
+
+    <!-- FORMULARIO CON TODOS LOS CONTROLES SOLICITADOS -->
+    <form>
+        <div class="campo">
+            <label>Nombre del cliente (opcional):</label><br>
+            <input type="text" name="nombre">
+        </div>
+
+        <div class="campo">
+            <label>Servicio utilizado:</label><br>
+            <select name="servicio">
+                <option value="reparacion">Reparación</option>
+                <option value="instalacion">Instalación</option>
+                <option value="mantenimiento">Mantenimiento</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Valoración general del 1 al 5:</label><br>
+            <input type="number" name="valoracion" min="1" max="5">
+        </div>
+
+        <!-- REQUISITO: CASILLAS DE VERIFICACIÓN (CHECKBOX) -->
+        <div class="campo">
+            <label>Aspectos que más le han gustado:</label><br>
+            <input type="checkbox" name="aspectos" value="atencion"> Atención<br>
+            <input type="checkbox" name="aspectos" value="rapidez"> Rapidez<br>
+            <input type="checkbox" name="aspectos" value="precio"> Precio<br>
+            <input type="checkbox" name="aspectos" value="calidad"> Calidad
+        </div>
+
+        <!-- REQUISITO: BOTONES DE OPCIÓN (RADIO) -->
+        <div class="campo">
+            <label>¿Recomendaría el servicio?</label><br>
+            <input type="radio" name="recomienda" value="si"> Sí
+            <input type="radio" name="recomienda" value="no"> No
+        </div>
+
+        <!-- REQUISITO: TEXTAREA PARA COMENTARIOS -->
+        <div class="campo">
+            <label>Comentarios:</label><br>
+            <textarea name="comentarios" rows="4" cols="40"></textarea>
+        </div>
+
+        <input type="submit" value="Enviar Encuesta">
+    </form>
+
+    <h2>Resultados de las encuestas</h2>
+
+    <!-- TABLA PRINCIPAL CON LOS 5 CASOS FICTICIOS -->
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Valoración</th>
+                <th>Recomienda</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>Reparación</td>
+                <td><span class="color-verde">5</span></td>
+                <td>Sí</td>
+                <td>Muy buen servicio</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Instalación</td>
+                <td><span class="color-verde">4</span></td>
+                <td>Sí</td>
+                <td>Rápido y eficaz</td>
+            </tr>
+            <tr>
+                <td>Lucía</td>
+                <td>Reparación</td>
+                <td><span class="color-amarillo">3</span></td>
+                <td>No</td>
+                <td>Tardaron demasiado</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>Mantenimiento</td>
+                <td><span class="color-verde">5</span></td>
+                <td>Sí</td>
+                <td>Excelente atención</td>
+            </tr>
+            <tr>
+                <td>Elena</td>
+                <td>Instalación</td>
+                <td><span class="color-rojo">2</span></td>
+                <td>No</td>
+                <td>Precio elevado</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>AMPLIACIÓN: Tabla resumen</h2>
+
+    <!-- REQUISITO DE AMPLIACIÓN: CONTEO DE PUNTUACIONES -->
+    <table style="width: 250px;">
+        <thead>
+            <tr>
+                <th>Valoración</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
